@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset básico */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,14 +15,14 @@
 
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(135deg, #dce3f0, #f2f2f2);
+      background: url('URL_DA_IMAGEM_DO_CAMINHÃO') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
       min-height: 100vh;
     }
 
-    /* Cabeçalho */
     header {
-      background-color: #1F3B4D;
+      background-color: rgba(31, 59, 77, 0.9);
       color: white;
       padding: 20px 0;
       text-align: center;
@@ -37,4 +36,92 @@
 
     header h1 {
       display: inline-block;
-      marg
+      margin-left: 10px;
+      font-size: 28px;
+      vertical-align: middle;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.9); /* fundo semi-transparente */
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .description {
+      font-size: 18px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #555;
+    }
+
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    iframe:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #FFA500;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 22px;
+      }
+      iframe {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png" alt="Logo Oficina">
+  <h1>Agendamento Oficina</h1>
+</header>
+
+<div class="container">
+  <p class="description">
+    Preencha este formulário para solicitar agendamento de manutenção da sua frota. Nossa equipe entrará em contato para confirmar o horário.
+  </p>
+
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdJz9N-547XeTXVIOHJQDi73vawugig-aQ0w8KGtzAzpnY5GQ/viewform?embedded=true"
+    frameborder="0" marginheight="0" marginwidth="0">
+    Carregando…
+  </iframe>
+</div>
+
+<footer>
+  &copy; 2025 Oficina XYZ. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
