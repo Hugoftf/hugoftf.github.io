@@ -18,13 +18,14 @@ body {
 /* Header atualizado com flexbox */
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* título à esquerda, ícone à direita */
+  align-items: center;          /* centraliza verticalmente título e ícone */
+  justify-content: center;      /* centraliza horizontalmente todo o conteúdo */
+  gap: 15px;                    /* espaço entre título e ícone */
   background-color: rgba(0, 0, 0, 0.4); /* transparente com leve escurecimento */
   padding: 20px 40px;
   position: relative;
   z-index: 10;
-  flex-wrap: wrap;
+  flex-wrap: wrap;              /* permite quebra em telas pequenas */
 }
 
 header h1 {
@@ -38,6 +39,24 @@ header h1 {
 header img {
   max-height: 80px;
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;     /* título e ícone empilham verticalmente */
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  header img {
+    max-height: 60px;
+  }
 }
 
 /* Container do formulário */
