@@ -16,20 +16,29 @@ body {
 }
 
 header {
-  background-color: rgba(31, 59, 77, 0.9);
+  background-color: rgba(0, 0, 0, 0.4); /* transparente com leve escurecimento */
   color: white;
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
-
-header img { max-height: 60px; vertical-align: middle; }
 
 header h1 {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 28px;
-  vertical-align: middle;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* dá destaque no fundo */
+  margin: 0;
 }
+
+header img {
+  display: block;
+  margin: 0 auto 10px;
+  max-height: 80px;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* deixa o ícone mais legível */
+}
+
 
 .container {
   max-width: 900px;
@@ -75,9 +84,10 @@ footer {
 
 <body>
 <header>
-  <img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png" alt="Logo Oficina" />
+  <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Logo Oficina" />
   <h1>Agendamento Oficina</h1>
 </header>
+
 
 <div class="container">
   <p class="description">
